@@ -1,3 +1,4 @@
+//glitch.com stuff
 const http = require('http');
 const express = require('express');
 const app = express();
@@ -6,6 +7,7 @@ app.get("/", (request, response) => {
 });
 app.listen(process.env.PORT);
 
+//the actual bot
 const fs = require('fs');
 const Discord = require('discord.js');
 const config = require('./config.json');
@@ -42,7 +44,7 @@ client.on('message', message => {
 
     if(message.content.indexOf(config.prefix) !== 0) return;
 
-    if(message.channel.type === "dm") {
+    if(message.channel.type === "dm" || message.guild.id !== "405158274313224203") {
         message.reply(`You can only use me on RainbowNotFound's server!`);
     } else {
         var cont = message.content.slice(config.prefix.length).split(" ");
