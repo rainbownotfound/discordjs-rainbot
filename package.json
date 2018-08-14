@@ -1,0 +1,29 @@
+{
+    "name": "rainbot",
+    "version": "0.0.1",
+    "description": "The personal bot of RainbowNotFound!",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js",
+        "install": "node-gyp rebuild"
+    },
+    "engines": {
+        "node": "8.4.0"
+    },
+    "dependencies": {
+        "chalk": "^2.3.2",
+        "common-tags": "^1.7.2",
+        "dateformat": "^3.0.3",
+        "discord.js": "^11.3.2",
+        "express": "^4.16.3",
+        "fs": "0.0.2",
+        "got": "^8.3.0",
+        "node-opus": "^0.2.7",
+        "node-twitterbot": "^0.2.2",
+        "sqlite": "^2.9.1",
+        "url": "^0.11.0",
+        "ytdl-core": "^0.20.2"
+    },
+    "authors": ["RainbowNotFound", "Cyber28"]
+}
