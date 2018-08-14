@@ -30,7 +30,8 @@ const randomFooter = () => {
         'Personal Bot for RainbowNotFound',
         'Only available in Rainbowia!',
         'Special Rainbowian Bot!',
-        'SQL People and higher Donator Tiers get early access!'
+        'SQL People and higher Donator Tiers get early access!',
+        'Pizza is the best food'
     ]);
 };
 
@@ -105,6 +106,7 @@ exports.parseArgs = (args, options) => {
 
     return {
         options: optionValues,
+        //NOTE: please leave me the leftover if you don't want to eat it -Cyber28
         leftover: args.slice(i)
     };
 };
