@@ -44,7 +44,7 @@ client.on('message', message => {
 
     if(message.content.indexOf(config.prefix) !== 0) return;
 
-    if(message.channel.type === "dm" || message.guild.id !== "405158274313224203") {
+    if(message.channel.type === "dm" && message.guild.id !== "405158274313224203") {
         message.reply(`You can only use me on RainbowNotFound's server!`);
     } else {
         var cont = message.content.slice(config.prefix.length).split(" ");
