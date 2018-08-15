@@ -1,4 +1,4 @@
-const utils = require('')
+const utils = require('../../utils.js')
 
 module.exports.run = (client, message, args) => {
     const echomsg = args.join(" ")
@@ -7,7 +7,7 @@ module.exports.run = (client, message, args) => {
 
 module.exports.help = {
     command: 'echo',
-    usage: 'echo <message>',
-    category: 'fun',
+    usage: 'r.echo <message>',
+    category: 'Fun',
     description: 'the bot echos whatever you want it to'
 };
