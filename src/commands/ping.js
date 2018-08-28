@@ -1,7 +1,9 @@
 const utils = require("../../utils.js")
 
 module.exports.run = (client, message, args) => {
-    message.reply(`Pong!\n${math.round(client.ping)} ms`)
+    message.channel.send({
+        embed: utils.embed(`Pong!`, `Latency is ${Math.round(client.ping)}ms`)
+    });
 };
 
 module.exports.help = {
