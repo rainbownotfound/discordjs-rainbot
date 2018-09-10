@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args) => {
             embed: utils.embed(`All Commands`, `Total Commands: ${client.commands.size}\n\`\`\`markdown\n${commandz}\n\`\`\``, [
                 {
                     name: 'Extra Help',
-                    value: 'Try \`db?help <commandName>\` for more info on a command!\n*Do not include the <>*'
+                    value: 'Try \`r.help <commandName>\` for more info on a command!\n*Do not include the <>*'
                 }
             ])
         });
@@ -18,7 +18,7 @@ module.exports.run = async (client, message, args) => {
             embed: utils.embed(`All Commands`, `Total Commands: ${client.commands.size}\n\n${commandz}`, [
                 {
                     name: 'Extra Help',
-                    value: 'Try \`db?help <commandName>\` for more info on a command!\n*Do not include the <>*'
+                    value: 'Try \`r.help <commandName>\` for more info on a command!\n*Do not include the <>*'
                 }
             ])
         });
@@ -30,7 +30,7 @@ module.exports.run = async (client, message, args) => {
                 embed: utils.embed(`Error!`, `I could not find command **${args[0]}**`, [
                     {
                         name: 'Possible Solutions',
-                        value: `Please try \`db?help all\` for a list of all commands!`
+                        value: `Please try \`r.help all\` for a list of all commands!`
                     },
                     {
                         name: 'Nothing helped?',
@@ -75,7 +75,7 @@ module.exports.run = async (client, message, args) => {
 
 module.exports.help = {
     command: 'help',
-    usage: 'db?help <all|commandName>',
+    usage: 'r.help <all|commandName>',
     category: 'Info',
     description: 'All the info you need for a nice little command!'
 };
