@@ -100,19 +100,13 @@ module.exports.run = (client, message, args) => {
 
         sqlite.get(`SELECT * FROM warnings`).then(row => {
             if(!row) {
-            /** if(warnedUser === "325951812991451137") {
+            if(warnedUser === "325951812991451137") {
                 message.channel.send({
                     embed: utils.embed(`Error!`, `You can't warn the Owner, silly!`, [], {
                         color: "#ff0000"
                     })
                 });
-            } else if (warnedUser === "455064886754672642") {
-                message.channel.send({
-                    embed: utils.embed(`Error!`, `You can't warn Demi!`, [], {
-                        color: "#ff0000"
-                    })
-                });
-            } else { **/
+            } else {
                 sqlite.run(`INSERT INTO warnings (warnedID, modID, warnID, reason, appeal, appealReason) VALUES (?, ?, ?, ?, ?, ?)`, [warnedUser, message.author.id, finalWarnID, reason, 'No Appeal Created', 'No Appeal Created']);
 
                 message.channel.send({
@@ -142,19 +136,13 @@ module.exports.run = (client, message, args) => {
                 });
             // }
             } else {
-                /** if(warnedUser === "325951812991451137") {
+                if(warnedUser === "325951812991451137") {
                 message.channel.send({
                     embed: utils.embed(`Error!`, `You can't warn the Owner, silly!`, [], {
                         color: "#ff0000"
                     })
                 });
-            } else if (warnedUser === "455064886754672642") {
-                message.channel.send({
-                    embed: utils.embed(`Error!`, `You can't warn Demi!`, [], {
-                        color: "#ff0000"
-                    })
-                });
-            } else { **/
+            } else { 
                 sqlite.run(`INSERT INTO warnings (warnedID, modID, warnID, reason, appeal, appealReason) VALUES (?, ?, ?, ?, ?, ?)`, [warnedUser, message.author.id, finalWarnID, reason, 'No Appeal Created', 'No Appeal Created']);
 
                 message.channel.send({
