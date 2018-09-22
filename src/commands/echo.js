@@ -3,8 +3,11 @@ const utils = require('../../utils.js')
 
 module.exports.run = (client, message, args) => {
     const echomsg = args.join(" ")
-    if(message.mentions) return message.reply("no tagging please!")
-    message.channel.send(echomsg)
+    if(message.content.includes('@')) { 
+        message.channel.send("No tagging please!")
+    } else {
+        message.channel.send(echomsg)
+    }
 };
 
 module.exports.help = {
